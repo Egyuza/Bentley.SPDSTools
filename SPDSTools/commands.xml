@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<KeyinTree xmlns="http://www.bentley.com/schemas/1.0/MicroStation/AddIn/KeyinTree.xsd">
+
+    <RootKeyinTable ID="root">
+        <Keyword CommandWord="TOOLS" SubtableRef="Commands">
+            <Options Required="true" />
+        </Keyword>
+    </RootKeyinTable>
+
+    <SubKeyinTables>
+        <KeyinTable ID="Commands">
+            <Keyword CommandWord="START" SubtableRef="StartTable" >
+                <Options Required="true" />
+            </Keyword>
+            <Keyword CommandWord="HELP" SubtableRef="HelpTable">
+                <Options Required="true" />
+            </Keyword>
+            <Keyword CommandWord="CMD" SubtableRef="CMDTable">
+                <Options Required="true" />
+            </Keyword>
+        </KeyinTable>
+
+        <KeyinTable ID="StartTable">
+            <Keyword CommandWord="TEST" />
+            <Keyword CommandWord="HEIGHT" />        
+        </KeyinTable>
+
+        <KeyinTable ID="HelpTable">
+            <Keyword CommandWord="CONFIGURATION" />
+        </KeyinTable>
+
+        <KeyinTable ID="CMDTable">
+            <Keyword CommandWord="REFRESH_ALL_SPDS_IN_MODEL" />
+        </KeyinTable>
+        
+    </SubKeyinTables>
+
+    <KeyinHandlers>
+        <!-- mdl load SPDSTools; TOOLS START HEIGHT -->
+        <KeyinHandler Keyin="TOOLS START TEST"   
+                      Function="SPDSTools.Keyin.cmd_HeightTool"/>        
+        <KeyinHandler Keyin="TOOLS START HEIGHT"   
+                      Function="SPDSTools.Keyin.cmd_HeightTool"/>        
+        <KeyinHandler Keyin="TOOLS HELP CONFIGURATION"  
+                      Function="SPDSTools.Keyin.cmd_Help_Configuration"/>
+        <KeyinHandler Keyin="TOOLS CMD REFRESH_ALL_SPDS_IN_MODEL"
+                      Function="SPDSTools.Keyin.cmd_RefreshAllSPDS_InModel"/>        
+    </KeyinHandlers>
+
+</KeyinTree>

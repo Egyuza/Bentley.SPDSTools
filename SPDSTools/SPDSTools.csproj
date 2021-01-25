@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{56D8663A-19C8-406A-98AC-0E5D54000672}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SPDSTools</RootNamespace>
+    <AssemblyName>SPDSTools</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Distrib\SPDSTools\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\..\Distrib\SPDSTools\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bentley.CustomProperties">
+      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\MdlSys\Asneeded\Bentley.CustomProperties.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Bentley.DgnCommonGeometry">
+      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\Bentley.DgnCommonGeometry.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Bentley.DgnDisplayNet">
+      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Bentley.DgnDisplayNet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Bentley.DgnPlatformNET">
+      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Bentley.DgnPlatformNET.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Bentley.EC.Persistence3">
+      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.EC.Persistence3.dll</HintPath>
+      <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Bentley.ECObjects.MixedMode3">
+      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.ECObjects.MixedMode3.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Bentley.ECObjects3">
+      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.ECObjects3.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Bentley.ECSystem3">
+      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.ECSystem3.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Bentley.General.1.0">
+      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.General.1.0.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Bentley.GeometryNET">
+      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Bentley.GeometryNET.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Bentley.GeometryNET.Common">
+      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Bentley.GeometryNET.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Bentley.GeometryNET.Structs">
+      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Bentley.GeometryNET.Structs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Bentley.Interop.MicroStationDGN">
+      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\Bentley.Interop.MicroStationDGN.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Bentley.MicroStation">
+      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\Bentley.MicroStation.dll</HintPath>
+      <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Bentley.Platform">
+      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.Platform.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Bentley.Windowing">
+      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.Windowing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ustation">
+      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\ustation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EC\ECHelper.cs" />
+    <Compile Include="EC\ECPropertyName.cs" />
+    <Compile Include="EC\ECPropertyReader.cs" />
+    <Compile Include="EC\ECPropertyWriter.cs" />
+    <Compile Include="ToolSnaps.cs" />
+    <Compile Include="Enums\ECClassTypeEnum.cs" />
+    <Compile Include="Enums\HeightToolTypeEnum.cs" />
+    <Compile Include="Enums\OrientVertEnum.cs" />
+    <Compile Include="Enums\OrientHorEnum.cs" />
+    <Compile Include="Enums\EnumString.cs" />
+    <Compile Include="Enums\ToolMode.cs" />
+    <Compile Include="Enums\ToolTypeEnum.cs" />
+    <Compile Include="Forms\ToolFormHelper.cs" />
+    <Compile Include="Forms\IToolControl.cs" />
+    <Compile Include="Forms\MyComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\MyComboBox.Designer.cs">
+      <DependentUpon>MyComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MyListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\MyListView.Designer.cs">
+      <DependentUpon>MyListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\AlignmentEnum.cs" />
+    <Compile Include="Forms\HeightToolControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\HeightToolControl.designer.cs">
+      <DependentUpon>HeightToolControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeightToolData.cs" />
+    <Compile Include="ModifyTool.cs" />
+    <Compile Include="Parameters\HeightParameters.cs" />
+    <Compile Include="Parameters\ICfgParameter.cs" />
+    <Compile Include="Parameters\CfgParameter.cs" />
+    <Compile Include="Parameters\CfgParameters.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SelectionHelper.cs" />
+    <Compile Include="Serializer.cs" />
+    <Compile Include="SPDSElement.cs" />
+    <Compile Include="SPDSException.cs" />
+    <Compile Include="SPDSTools.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="HeightTool.cs" />
+    <Compile Include="HeightToolElement.cs" />
+    <Compile Include="Keyin.cs" />
+    <Compile Include="Forms\LeaderToolControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\LeaderToolControl.designer.cs">
+      <DependentUpon>LeaderToolControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeadertTool.cs" />
+    <Compile Include="LeadertToolElement.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TextMargin.cs" />
+    <Compile Include="TextStyleHelper.cs" />
+    <Compile Include="Tool.cs" />
+    <Compile Include="Forms\ToolMainContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ToolMainContainer.Designer.cs">
+      <DependentUpon>ToolMainContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolData.cs" />
+    <Compile Include="ToolElement.cs" />
+    <Compile Include="ToolProperty.cs" />
+    <Compile Include="Enums\ToolStyleEnum.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\LeaderToolControl.en.resx">
+      <DependentUpon>LeaderToolControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LeaderToolControl.resx">
+      <DependentUpon>LeaderToolControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HeightToolControl.en.resx">
+      <DependentUpon>HeightToolControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HeightToolControl.resx">
+      <DependentUpon>HeightToolControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HeightToolControl.ru.resx">
+      <DependentUpon>HeightToolControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ToolMainContainer.en.resx">
+      <DependentUpon>ToolMainContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ToolMainContainer.resx">
+      <DependentUpon>ToolMainContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ToolMainContainer.ru.resx">
+      <DependentUpon>ToolMainContainer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\part.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\pencil.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="commands.xml">
+      <LogicalName>CommandTable.xml</LogicalName>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="history.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Readme.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\icons8-hunt-30.png" />
+    <None Include="Resources\icons8-available-updates-48.png" />
+    <None Include="Resources\icons8-compass-48.png" />
+    <None Include="Resources\icons8-design-edit-48.png" />
+    <None Include="Resources\icons8-drawing-compass-48.png" />
+    <None Include="Resources\icons8-edit-48.png" />
+    <None Include="Resources\icons8-installing-updates-48.png" />
+    <None Include="Resources\icons8-maintenance-48.png" />
+    <None Include="Resources\icons8-settings-48.png" />
+    <None Include="Resources\icons8-update-48.png" />
+    <None Include="app.config" />
+    <Content Include="ECSchemas\SPDSTools.01.00.ecschema.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="help\notes.txt" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>rem rd /s /q "$(SolutionDir)obj"
+
+rem AECOsim:
+xcopy /y "$(TargetPath)" "c:\Program Files\Bentley\AECOsim CONNECT Edition\AECOsimBuildingDesigner\Mdlapps\"
+xcopy /y /s "$(TargetDir)en" "c:\Program Files\Bentley\AECOsim CONNECT Edition\AECOsimBuildingDesigner\Mdlapps\en"
+xcopy /y "$(TargetDir)ECSchemas\*ecschema.xml" "c:\Program Files\Bentley\AECOsim CONNECT Edition\AECOsimBuildingDesigner\ECSchemas\Dgn\"
+
+rem Microstation:
+copy /y "$(TargetPath)" "c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Mdlapps\"
+xcopy /y /s "$(TargetDir)en" "c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Mdlapps\en"
+xcopy /y "$(TargetDir)ECSchemas\*ecschema.xml" "c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\ECSchemas\Dgn\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

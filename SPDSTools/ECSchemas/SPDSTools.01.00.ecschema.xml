@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+атрибуты:
+• typeName = {boolean, int, long, double, string, point3d,}
+• readOnly = {True, False}
+
+Скрытое свойство:
+    <ECCustomAttributes>
+        <HideProperty xmlns="EditorCustomAttributes.01.03">
+            <If2D>True</If2D>
+            <If3D>True</If3D>
+        </HideProperty>
+    </ECCustomAttributes>
+или
+    <ECCustomAttributes>
+        <DisplayOptions xmlns="Bentley_Standard_CustomAttributes.01.10">
+            <Hidden>True</Hidden>
+        </DisplayOptions>
+        <DontShowNullProperties xmlns="EditorCustomAttributes.01.00" />
+    </ECCustomAttributes>
+-->
+
+<ECSchema schemaName="SPDSTools" nameSpacePrefix="AEP" version="01.00" xmlns="http://www.bentley.com/schemas/Bentley.ECXML.2.0">
+    <ECSchemaReference name="EditorCustomAttributes" version="01.03" prefix="beca" />
+    <ECSchemaReference name="Bentley_Standard_CustomAttributes" version="01.10" prefix="besc" />
+    <!-- ОБЩИЙ класс для всех тулов -->
+    <ECClass typeName="Tool" isStruct="True" isDomainClass="True">
+        <ECCustomAttributes>
+            <DisplayOptions xmlns="Bentley_Standard_CustomAttributes.01.10">
+                <Hidden>True</Hidden>
+            </DisplayOptions>
+        </ECCustomAttributes>
+        <ECProperty propertyName="Type" typeName="string" readOnly="True">
+            <ECCustomAttributes>
+                <DisplayOptions xmlns="Bentley_Standard_CustomAttributes.01.10">
+                    <Hidden>True</Hidden>
+                </DisplayOptions>
+            </ECCustomAttributes>
+        </ECProperty>
+        <ECProperty propertyName="TargetReferenceId" typeName="long" readOnly="True">
+            <ECCustomAttributes>
+                <DisplayOptions xmlns="Bentley_Standard_CustomAttributes.01.10">
+                    <Hidden>True</Hidden>
+                </DisplayOptions>
+            </ECCustomAttributes>
+        </ECProperty>
+        <ECProperty propertyName="TargetId" typeName="long" readOnly="True">
+            <ECCustomAttributes>
+                <DisplayOptions xmlns="Bentley_Standard_CustomAttributes.01.10">
+                    <Hidden>True</Hidden>
+                </DisplayOptions>
+            </ECCustomAttributes>
+        </ECProperty>
+        <ECProperty propertyName="IsAnnotation" typeName="boolean" readOnly="True"/>
+        <ECProperty propertyName="AnnotationScale" typeName="double" readOnly="True"/>
+        <ECProperty propertyName="IsMerged" typeName="boolean" readOnly="True"/>
+        
+        <!--<ECProperty propertyName="_AppVersion" typeName="string">
+            <ECCustomAttributes>
+                <DisplayOptions xmlns="Bentley_Standard_CustomAttributes.01.10">
+                    <Hidden>True</Hidden>
+                </DisplayOptions>
+            </ECCustomAttributes>
+        </ECProperty>-->
+    </ECClass>
+    <!-- Класс "ВЫСОТНАЯ ОТМЕТКА" -->
+    <ECClass typeName="HeightTool" isStruct="True" isDomainClass="True">
+        <ECCustomAttributes>
+            <DisplayOptions xmlns="Bentley_Standard_CustomAttributes.01.10">
+                <Hidden>True</Hidden>
+            </DisplayOptions>
+        </ECCustomAttributes>
+        <ECProperty propertyName="Style" typeName="int"  readOnly="True">
+            <ECCustomAttributes>
+                <StandardValues xmlns="EditorCustomAttributes.01.00">
+                    <ValueMap>
+                        <ValueMap>
+                            <Value>0</Value>
+                            <DisplayString>Default</DisplayString>
+                        </ValueMap>
+                        <ValueMap>
+                            <Value>1</Value>
+                            <DisplayString>Paks</DisplayString>
+                        </ValueMap>
+                        <ValueMap>
+                            <Value>2</Value>
+                            <DisplayString>ED</DisplayString>
+                        </ValueMap>
+                    </ValueMap>
+                </StandardValues>
+                <RequiresReload xmlns="EditorCustomAttributes.01.00" />
+            </ECCustomAttributes>
+        </ECProperty>
+        <ECProperty propertyName="TextStyle" typeName="string" readOnly="True"/>
+        <ECProperty propertyName="Text" typeName="string" readOnly="True">
+            <ECCustomAttributes>
+                <HideProperty xmlns="EditorCustomAttributes.01.03">
+                    <If>this.AutoCalc</If>
+                </HideProperty>
+            </ECCustomAttributes>
+        </ECProperty>
+        <ECProperty propertyName="Text2" typeName="string" readOnly="True">
+            <ECCustomAttributes>
+                <HideProperty xmlns="EditorCustomAttributes.01.03">
+                    <If>this.AutoCalc</If>
+                </HideProperty>
+            </ECCustomAttributes>
+        </ECProperty>
+        <ECProperty propertyName="AutoCalc" typeName="boolean"  readOnly="True"/>
+        <ECProperty propertyName="CalcByItem" typeName="boolean" readOnly="True">
+            <ECCustomAttributes>
+                <HideProperty xmlns="EditorCustomAttributes.01.03">
+                    <If>this.AutoCalc = False</If>
+                </HideProperty>
+            </ECCustomAttributes>
+        </ECProperty>
+        <ECProperty propertyName="ShowItemHeight" typeName="boolean" readOnly="True"/>
+        <ECProperty propertyName="UseFilling" typeName="boolean"  readOnly="True"/>
+        <ECProperty propertyName="SectorArrow" typeName="boolean"  readOnly="True"/>
+        <ECProperty propertyName="Type" typeName="int" readOnly="True">
+            <ECCustomAttributes>
+                <StandardValues xmlns="EditorCustomAttributes.01.00">
+                    <ValueMap>
+                        <!--
+                        <ValueMap>
+                            <Value>0</Value>
+                            <DisplayString>Auto</DisplayString>
+                        </ValueMap>
+                        -->
+                        <ValueMap>
+                            <Value>1</Value>
+                            <DisplayString>Planned</DisplayString>
+                        </ValueMap>
+                        <ValueMap>
+                            <Value>2</Value>
+                            <DisplayString>Section</DisplayString>
+                        </ValueMap>
+                    </ValueMap>
+                </StandardValues>
+                <RequiresReload xmlns="EditorCustomAttributes.01.00" />
+            </ECCustomAttributes>
+        </ECProperty>
+        <ECProperty propertyName="AsLeader" typeName="boolean" readOnly="True">
+            <ECCustomAttributes>
+                <HideProperty xmlns="EditorCustomAttributes.01.03">
+                    <If>this.Type &lt;&gt; 1</If>
+                </HideProperty>
+            </ECCustomAttributes>
+        </ECProperty>
+    </ECClass>
+</ECSchema>
