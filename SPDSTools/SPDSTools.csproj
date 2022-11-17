@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SPDSTools</RootNamespace>
     <AssemblyName>SPDSTools</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
     <SccProjectName>SAK</SccProjectName>
@@ -60,70 +60,70 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bentley.CustomProperties">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\MdlSys\Asneeded\Bentley.CustomProperties.dll</HintPath>
+      <HintPath>c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\MdlSys\Asneeded\Bentley.CustomProperties.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Bentley.DgnCommonGeometry">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\Bentley.DgnCommonGeometry.dll</HintPath>
+      <HintPath>c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\Bentley.DgnCommonGeometry.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Bentley.DgnDisplayNet">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Bentley.DgnDisplayNet.dll</HintPath>
+      <HintPath>c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Bentley.DgnDisplayNet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Bentley.DgnPlatformNET">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Bentley.DgnPlatformNET.dll</HintPath>
+      <HintPath>c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Bentley.DgnPlatformNET.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Bentley.EC.Persistence3">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.EC.Persistence3.dll</HintPath>
+      <HintPath>c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.EC.Persistence3.dll</HintPath>
       <Private>False</Private>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="Bentley.ECObjects.MixedMode3">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.ECObjects.MixedMode3.dll</HintPath>
+      <HintPath>c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.ECObjects.MixedMode3.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Bentley.ECObjects3">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.ECObjects3.dll</HintPath>
+      <HintPath>c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.ECObjects3.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Bentley.ECSystem3">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.ECSystem3.dll</HintPath>
+      <HintPath>c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.ECSystem3.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Bentley.General.1.0">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.General.1.0.dll</HintPath>
+      <HintPath>c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.General.1.0.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Bentley.GeometryNET">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Bentley.GeometryNET.dll</HintPath>
+      <HintPath>c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Bentley.GeometryNET.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Bentley.GeometryNET.Common">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Bentley.GeometryNET.Common.dll</HintPath>
+      <HintPath>c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Bentley.GeometryNET.Common.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Bentley.GeometryNET.Structs">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Bentley.GeometryNET.Structs.dll</HintPath>
+      <HintPath>c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Bentley.GeometryNET.Structs.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Bentley.Interop.MicroStationDGN">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\Bentley.Interop.MicroStationDGN.dll</HintPath>
+      <HintPath>c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\Bentley.Interop.MicroStationDGN.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <Private>False</Private>
     </Reference>
     <Reference Include="Bentley.MicroStation">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\Bentley.MicroStation.dll</HintPath>
+      <HintPath>c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\Bentley.MicroStation.dll</HintPath>
       <Private>False</Private>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="Bentley.Platform">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.Platform.dll</HintPath>
+      <HintPath>c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.Platform.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Bentley.Windowing">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.Windowing.dll</HintPath>
+      <HintPath>c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\ECFramework\Bentley.Windowing.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="PresentationCore" />
@@ -140,7 +140,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="ustation">
-      <HintPath>..\..\..\..\..\..\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\ustation.dll</HintPath>
+      <HintPath>c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\ustation.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="WindowsBase" />
@@ -286,7 +286,9 @@
     <None Include="Resources\icons8-maintenance-48.png" />
     <None Include="Resources\icons8-settings-48.png" />
     <None Include="Resources\icons8-update-48.png" />
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="ECSchemas\SPDSTools.01.00.ecschema.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -299,17 +301,10 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>rem rd /s /q "$(SolutionDir)obj"
-
-rem AECOsim:
-xcopy /y "$(TargetPath)" "c:\Program Files\Bentley\AECOsim CONNECT Edition\AECOsimBuildingDesigner\Mdlapps\"
-xcopy /y /s "$(TargetDir)en" "c:\Program Files\Bentley\AECOsim CONNECT Edition\AECOsimBuildingDesigner\Mdlapps\en"
-xcopy /y "$(TargetDir)ECSchemas\*ecschema.xml" "c:\Program Files\Bentley\AECOsim CONNECT Edition\AECOsimBuildingDesigner\ECSchemas\Dgn\"
-
-rem Microstation:
-copy /y "$(TargetPath)" "c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Mdlapps\"
-xcopy /y /s "$(TargetDir)en" "c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Mdlapps\en"
-xcopy /y "$(TargetDir)ECSchemas\*ecschema.xml" "c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\ECSchemas\Dgn\"</PostBuildEvent>
+    <PostBuildEvent>xcopy /y "$(TargetPath)" "c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\"
+xcopy /y /s "$(TargetDir)en" "c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\Assemblies\en"
+xcopy /y "$(TargetDir)ECSchemas\*ecschema.xml" "c:\Program Files\Bentley\MicroStation CONNECT Edition\MicroStation\ECSchemas\Dgn\"
+</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

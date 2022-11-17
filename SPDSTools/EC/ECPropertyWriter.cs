@@ -36,15 +36,15 @@ public class ECPropertyWriter
         this.instClass = schema.GetClass(EnumString.ToString(instType));
         if (this.instClass == null)
         {
-            throw new Exception(
-                "Couldn't get instance of ECSchema for writing properties");
+            //throw new Exception(
+            //    "Couldn't get instance of ECSchema for writing properties");
         }
         
         var mgr = DgnECManager.Manager;
 
-        this.ecInst = 
+        this.ecInst = instClass == null ? null :
             mgr.ObtainInstanceEnabler(file, instClass)?.SharedWipInstance;
-        
+
         using (DgnECInstanceCollection ecInstances =
         mgr.GetElementProperties(element, ECQueryProcessFlags.SearchAllClasses))
         {
@@ -52,11 +52,13 @@ public class ECPropertyWriter
                 x.ClassDefinition.Name == EnumString.ToString(instType));
             if (inst != null)
             {
-                foreach (IECPropertyValue propVal in inst)
-                {
-                    if (ecInst.ClassDefinition.Contains(propVal.Property))
-                        SetValue(propVal);
-                }
+                // this.ecInst = mgr.ObtainInstanceEnabler(file, inst.ClassDefinition)?.SharedWipInstance;
+
+                //foreach (IECPropertyValue propVal in inst)
+                //{
+                //    if (ecInst.ClassDefinition.Contains(propVal.Property))
+                //        SetValue(propVal);
+                //}
             }
         }
     }
@@ -128,7 +130,8 @@ public class ECPropertyWriter
 
             // привязка свойств к элементу:
             var propInst = (ecInst.Enabler as DgnECInstanceEnabler).
-            CreateInstanceOnElement(element, ecInst, false);
+                CreateInstanceOnElement(element, ecInst, true);
+
         }
         catch (Exception ex)
         {

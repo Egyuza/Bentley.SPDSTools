@@ -74,7 +74,7 @@ internal static class ECHelper
         return GetSchema(model.GetDgnFile());
     }
 
-    public static IECSchema GetSchema(DgnFile file)
+    public static IECSchema GetSchema(DgnFile file, string schemaName = SCHEMA_NAME)
     {
         if (file == null)
             throw new ArgumentNullException();
@@ -86,7 +86,7 @@ internal static class ECHelper
         cachedFile = file;
         { // todo Правильная инициализация схемы:
             // в.1
-            cachedSchema = DgnECManager.Manager.LocateDeliveredSchema(SCHEMA_NAME, 
+            cachedSchema = DgnECManager.Manager.LocateDeliveredSchema(schemaName, 
                 VrnMajor, VrnMinor, SchemaMatchType.LatestCompatible, file);
             // в.2
             //FindInstancesScope scope = FindInstancesScope.CreateScope(file, new FindInstancesScopeOption());

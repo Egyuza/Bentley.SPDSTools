@@ -38,6 +38,21 @@ public sealed class SPDSTools: Bentley.MstnPlatformNET.AddIn
         
         // todo : найти способ определить язык приложения
         Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+
+        try
+        {
+            //Bentley.ECObjects.ECObjects.Initialize();
+            //var type = Bentley.ECObjects.ECObjects.DateTimeType;
+            //Bentley.ECObjects.ECObjects.in
+            //DateTime date;
+            //Bentley.ECObjects.ECObjects.StringToDateTime(out date, "2459275.9130568979");
+            ;
+        }
+        catch (Exception)
+        {
+
+            
+        }
     }
 
     private void SPDSTools_SelectionChangedEvent(

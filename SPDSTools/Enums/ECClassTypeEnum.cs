@@ -9,6 +9,12 @@ public enum ECClassTypeEnum
     [StringValue("HeightTool")]
     HeightTool,
     [StringValue("LeaderTool")]
-    LeaderTool
+    LeaderTool,
+    [StringValue("MstnHeader")]
+    MstnHeader,
+    [StringValue("NormalCellElement")]
+    NormalCell,
+    [StringValue("UIDElement")]
+    UIDElement,
 }
 }

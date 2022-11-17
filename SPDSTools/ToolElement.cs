@@ -331,7 +331,8 @@ public abstract class ToolElement : IDisposable
         if (addToModelStatus != StatusInt.Success)
             return addToModelStatus;
         
-        writeProperties();        
+        //writeTest();
+        writeProperties();
 
         Element root = Target;
         if (root != null)
@@ -390,6 +391,27 @@ public abstract class ToolElement : IDisposable
             root = dispPath.GetHeadElement();            
         }
         return root != null;
+    }
+
+    private void writeTest()
+    {
+        try
+        {
+            //IECSchema schema = Bentley.DgnPlatformNET.DgnEC.DgnECManager.Manager.LocateDeliveredSchema(
+            //    "IGN_General", 1, 0, SchemaMatchType.LatestCompatible, file);
+
+            IECSchema schema = ECHelper.GetSchema(file, "IGN_General");
+        
+            var writer = ECPropertyWriter.Get(
+                Cell, schema,  ECClassTypeEnum.UIDElement);
+        
+            writer?.SetValue("UID", "1234");
+            writer?.SaveOnElement();
+        }
+        catch (Exception)
+        {
+
+        }
     }
 
     private void writeProperties()
